@@ -23,7 +23,7 @@ int board_main() {
     while (exitt == 0) {
         help_print();
         printf("Write coordinates of the figure and \n   where to put it."
-        " Example a2-c8\n""\t\t%sCommand:\n\t\t ", GREEN);
+        " Example a2-c8\n""\t\tCommand:\n\t\t ");
         scanf("%s", places);
         printf("%s", RESET);
         if (places[0] == 'r') {
@@ -40,7 +40,7 @@ int board_main() {
         if (exitt == -1) {
             print_board();
             if (places[0] == 'r') {
-                printf("%s\t\tRestart!\n%s", GREEN, RESET);
+                //printf("%s\t\tRestart!\n%s", GREEN, RESET);
             } else {
                 printf("%s\tWrong coordinates or way!\n%s", RED, RESET);
             }
@@ -51,7 +51,7 @@ int board_main() {
 }
 
 void help_print() {
-    printf("\t%s(r) Restart  (q) Quit\n\n%s", GRAY, RESET);
+    printf("\t%s      (q) Quit\n\n%s", GRAY, RESET);
 }
 
 void info_print() {
